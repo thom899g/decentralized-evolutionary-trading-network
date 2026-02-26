@@ -1,0 +1,33 @@
+# Decentralized Evolutionary Trading Network Configuration
+# Version: 1.0.0
+
+firebase:
+  project_id: "evolution-trading-network"
+  credentials_path: "./config/firebase_credentials.json"
+  
+trading:
+  exchanges: ["binance", "coinbase", "kraken"]
+  symbols: ["BTC/USDT", "ETH/USDT", "SOL/USDT"]
+  timeframes: ["1m", "5m", "15m", "1h"]
+  
+rl_agents:
+  memory_size: 10000
+  batch_size: 64
+  learning_rate: 0.001
+  gamma: 0.95
+  
+decentralized_protocol:
+  insight_broadcast_interval: 300  # seconds
+  consensus_threshold: 0.7
+  validation_window: 3600  # seconds
+  
+logging:
+  level: "INFO"
+  file_path: "./logs/detn_system.log"
+  max_size_mb: 100
+  backup_count: 5
+
+performance:
+  evaluation_interval: 86400  # seconds
+  evolutionary_pressure: 0.3
+  migration_rate: 0.1
